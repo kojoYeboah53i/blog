@@ -10,6 +10,7 @@
 .nav-top{
     width: 100%;
     padding: 0.5rem 0.8rem;
+    /* background-color: rgba(157, 155, 155, 0.299); */
     /* border: 2px solid red; */
     display: flex;
     justify-content: space-between;
@@ -153,26 +154,6 @@ margin-bottom: 2rem
 
 }
 
-/* .main_content .questionnaire .menu-items select{
-    width: 100%;
-    padding: 0.5rem 0.5rem;
-    border: none;
-    border-radius: 5px;
-    background-color: rgba(157, 155, 155, 0.299);
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 1sec ease-in-out;
-}
-.main_content .questionnaire .menu-items select option{
-  
-    background-color: rgba(157, 155, 155, 0.299);
-    color: white;
-
-    cursor: pointer;
-    transition: 1sec ease-in-out;
-} */
 
 .main_content .post{
     margin-top: 2.4rem;
@@ -241,7 +222,7 @@ margin-bottom: 2rem
     display: flex;
     align-items: center;
 }
-.main_content .post .content img{
+/* .main_content .post .content img{
     object-fit: cover;
     width: 57rem;
     height: 26rem;
@@ -249,6 +230,11 @@ margin-bottom: 2rem
     bottom: 0;
     left: 0;
     border-radius: 13px;
+} */
+
+.main_content .post .content .article{
+    flex: 2;
+    padding: 0.3rem 0.5rem;
 }
 
 
