@@ -8,7 +8,8 @@ exports.up = function(knex) {
         table.increments('id').primary();
         table.string('username', 255).notNullable();
         table.string('password', 255).notNullable();
-        table.string('profile_photo', 255).notNullable();
+        table.string('profile_photo', 255);
+        table.string('location', 255);
         table.string('email', 255).unique().notNullable();
         table.timestamp(true, true);
     });
@@ -20,5 +21,4 @@ exports.up = function(knex) {
  */
 exports.down = function(knex) {
     return knex.schema.dropTable('users');
-  
 };

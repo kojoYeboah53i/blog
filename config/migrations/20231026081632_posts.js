@@ -8,6 +8,7 @@ exports.up = function(knex) {
         table.increments('id').primary();
         table.string('title', 255).notNullable();
         table.string('article', 255);
+        table.string('image', 255);
         table.integer('user_id', 255).notNullable();
         table.integer('comments', 255);
         table.timestamp(true, true);

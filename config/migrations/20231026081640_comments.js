@@ -10,7 +10,7 @@ exports.up = function(knex) {
 
     table.integer('user_id', 255).notNullable();
     table.integer('post_id', 255).notNullable();
-    table.integer('comment', 255);
+    table.string('comment', 255);
     table.timestamp(true, true);
 });
   
