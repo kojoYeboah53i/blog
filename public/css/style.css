@@ -165,7 +165,6 @@ margin-bottom: 2rem
     width: 100%;
     text-align: center;
     margin: 0 auto;
-    height: 60vh;
     background-color: rgba(157, 155, 155, 0.299);
     border-radius: 10px;
     position: relative;
@@ -190,7 +189,8 @@ margin-bottom: 2rem
     position: absolute;
     top: 0;
     left: 0;
-    /* border: 2px solid blue; */
+    border: 2px solid blue;
+    height: 8vh;
 
 }
 .main_content .post header .left{
@@ -233,7 +233,8 @@ margin-bottom: 2rem
 } */
 
 .main_content .post .content .article{
-    flex: 2;
+    border: 2px solid red;
+    height: 13vh;
     padding: 0.3rem 0.5rem;
 }
 
