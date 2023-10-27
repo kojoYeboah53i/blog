@@ -13,8 +13,10 @@ const routes = require('./src/router/routes')
 //middleware
 
 //use body-parser
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({extended: false}));
+// use express json
+app.use(express.json());
 
 const PORT = process.env.PORT;
 
@@ -29,6 +31,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
     res.render('pages/index', {title: "landing",} );
 });
+
+app.use('/api', routes);
+
 
 
 app.listen(PORT, () => {

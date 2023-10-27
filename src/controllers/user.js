@@ -1,5 +1,4 @@
 const User = require('../model/user');
-// const knex = require('../config/db');
 
 
 // login user
@@ -42,4 +41,34 @@ exports.getAllUsers = async (req, res) => {
         res.status(500).send('Internal Server Error');
     }
 
+}
+
+
+//create user
+exports.createUser = async (req, res) => {
+    // return res.status(200).json({ jsonBody: req.body });
+    try {
+        const { username, email, password, location, profile_photo } = req.body;
+
+        if (!username || !email || !password || !location || !profile_photo) {
+            return res.status(400).json({ message: 'Username, email, password, location and profile_photo are required' });
+        }
+
+        const user = await User.query().insert({
+            username,
+            email,
+            password,
+            location,
+            profile_photo
+        });
+
+        if (!user) {
+            throw new Error('Something went wrong');
+        }
+
+        res.status(201).json(user);
+    } catch (error) {
+        console.log(error);
+        res.status(500).send(error.message);
+    }
 }

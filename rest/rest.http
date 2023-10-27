@@ -119,5 +119,21 @@ Content-Type: application/json
 }
 
 
+###
+GET http://localhost:5808/api/users
+
+###
+POST http://localhost:5808/api/sign-up
+Content-Type: application/json
+
+{
+    "username" : "yeboah53i",
+    "email" : "yeboah53i@live.com",
+    "password" : "admin",
+    "location" : "Kumasi, Ghana",
+    "profile_photo" : "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwwwallrecipes.com%2Frecipes%2F16765%2Ffried-rice-restaurant-style%2F&psig=AOvVaw1Z"
+}
+
+
 
     
